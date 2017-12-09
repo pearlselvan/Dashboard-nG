@@ -20,5 +20,7 @@ export class SigninComponent implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     this.authService.signinUser(email, password);
+
+    console.log('Token OnSign : ' , this.authService.getToken());
   }
 }

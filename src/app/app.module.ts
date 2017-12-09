@@ -2,6 +2,7 @@ import {Routes , RouterModule} from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from 'app/app-routing.module';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -16,17 +17,19 @@ import { ContactComponent } from './contact/contact.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from 'app/auth/signup/signup.component';
 import { AuthService } from './auth/auth.service';
+import { RunComponent } from './run/run.component';
 
 
-const appRoutes: Routes = [
-  {path: '' , component : HomeComponent },
-  {path: 'status' , component : StatusComponent },
-  {path: 'contact' , component : ContactComponent },
-  {path: 'signup' , component : SignupComponent },
-  {path: 'signin' , component : SigninComponent }
+
+// const appRoutes: Routes = [
+//   {path: '' , component : HomeComponent },
+//   {path: 'status' , component : StatusComponent },
+//   {path: 'contact' , component : ContactComponent },
+//   {path: 'signup' , component : SignupComponent },
+//   {path: 'signin' , component : SigninComponent }
 
 
-];
+// ];
 
 
 @NgModule({
@@ -39,13 +42,16 @@ const appRoutes: Routes = [
     StatusComponent,
     ContactComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    RunComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
+    // RouterModule.forRoot(appRoutes)
   ],
   providers: [AccountService , LoggingService , AuthService],
   bootstrap: [AppComponent]

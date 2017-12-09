@@ -1,21 +1,9 @@
-<style type="text/css">
-  #loginForm .has-error .control-label,
-  #loginForm .has-error .help-block,
-  #loginForm .has-error .form-control-feedback {
-      color: #f39c12;
-  }
 
-  #loginForm .has-success .control-label,
-  #loginForm .has-success .help-block,
-  #loginForm .has-success .form-control-feedback {
-      color: #18bc9c;
-  }
-  </style>
 
 <div class="row">
     <br><br><br>
     <div class="cos-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <form (ngSubmit)="onSigin(f)" #f="ngForm" name="loginForm">
+        <form (ngSubmit)="onSigin(f)" #f="ngForm">
             <div class="form-group">
               <label for="email"> Email : </label>
               <input type="email" name="email"
